@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.totalhome.models.RecoveryResponse
 import kotlinx.coroutines.*
 
 class ForgotPasswordActivity : AppCompatActivity() {

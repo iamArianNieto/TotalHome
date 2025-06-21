@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
 
         // Espera 2 segundos y abre MainActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, DashboardActivity::class.java))
             finish() // Cierra la Splash
         }, 2000)
     }

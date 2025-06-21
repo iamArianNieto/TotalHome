@@ -1,7 +1,7 @@
 package com.example.totalhome.network
 
-import com.example.totalhome.LoginResponse
-import com.example.totalhome.RecoveryResponse
+import com.example.totalhome.models.LoginResponse
+import com.example.totalhome.models.RecoveryResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.net.HttpURLConnection
@@ -95,7 +95,7 @@ class ApiService {
 
                 val user = if (success && json.has("user")) {
                     val userJson = json.getJSONObject("user")
-                    com.fraccionamiento.app.User(
+                    com.example.totalhome.models.User(
                         id = userJson.getInt("id"),
                         username = userJson.getString("username"),
                         fullName = userJson.getString("full_name"),
