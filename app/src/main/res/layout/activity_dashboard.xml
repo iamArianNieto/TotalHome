@@ -1,0 +1,396 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary_color"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/tv_fraccionamiento_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fraccionamiento_name"
+                style="@style/HeaderTextStyle" />
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/profile_background"
+                android:src="@drawable/ic_person"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_welcome_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido, Juan Pérez"
+            style="@style/WelcomeTextStyle" />
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Quick Actions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quick_access"
+                style="@style/SectionTitleStyle"
+                android:layout_marginBottom="15dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="25dp">
+
+                <!-- Avisos Card -->
+                <LinearLayout
+                    android:id="@+id/card_avisos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="7.5dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/ripple_effect"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_icon_background"
+                        android:src="@drawable/ic_announcement"
+                        android:scaleType="centerInside"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avisos"
+                        style="@style/CardTitleStyle"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avisos_desc"
+                        style="@style/CardDescStyle" />
+
+                </LinearLayout>
+
+                <!-- Pagos Card -->
+                <LinearLayout
+                    android:id="@+id/card_pagos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="7.5dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/ripple_effect"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_icon_background"
+                        android:src="@drawable/ic_payment"
+                        android:scaleType="centerInside"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pagos"
+                        style="@style/CardTitleStyle"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pagos_desc"
+                        style="@style/CardDescStyle" />
+
+                </LinearLayout>
+
+                <!-- Quejas Card -->
+                <LinearLayout
+                    android:id="@+id/card_quejas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="7.5dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/ripple_effect"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_icon_background"
+                        android:src="@drawable/ic_report"
+                        android:scaleType="centerInside"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quejas"
+                        style="@style/CardTitleStyle"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quejas_desc"
+                        style="@style/CardDescStyle" />
+
+                </LinearLayout>
+
+                <!-- QR Visitas Card -->
+                <LinearLayout
+                    android:id="@+id/card_qr_visitas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="7.5dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/ripple_effect"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_icon_background"
+                        android:src="@drawable/ic_qr_code"
+                        android:scaleType="centerInside"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qr_visitas"
+                        style="@style/CardTitleStyle"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qr_visitas_desc"
+                        style="@style/CardDescStyle" />
+
+                </LinearLayout>
+
+            </GridLayout>
+
+            <!-- Recent Activity -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recent_activity"
+                style="@style/SectionTitleStyle"
+                android:layout_marginBottom="15dp" />
+
+            <!-- Activity Items -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:background="@drawable/card_background"
+                android:elevation="1dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/activity_icon_background"
+                    android:src="@drawable/ic_announcement"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_notice"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suspensión de agua programada"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2h"
+                    android:textColor="@color/text_hint"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:background="@drawable/card_background"
+                android:elevation="1dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/activity_icon_background"
+                    android:src="@drawable/ic_person"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visit_registered"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="María González - Entregador"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5h"
+                    android:textColor="@color/text_hint"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:background="@drawable/card_background"
+                android:elevation="1dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/activity_icon_background"
+                    android:src="@drawable/ic_payment"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_received"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuota de mantenimiento - Marzo"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1d"
+                    android:textColor="@color/text_hint"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
