@@ -53,13 +53,13 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         cardAvisos.setOnClickListener {
-            // Intent hacia AvisosActivity
-            Toast.makeText(this, "Avisos - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AvisosActivity::class.java)
+            startActivity(intent)
         }
 
         cardPagos.setOnClickListener {
-            // Intent hacia PagosActivity
-            Toast.makeText(this, "Pagos - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, PaymentsActivity::class.java)
+            startActivity(intent)
         }
 
         cardQuejas.setOnClickListener {

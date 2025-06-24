@@ -29,4 +29,61 @@
     <string name="new_notice">Nuevo aviso publicado</string>
     <string name="visit_registered">Visita registrada</string>
     <string name="payment_received">Pago recibido</string>
+
+    <!-- Pagos -->
+    <string name="pagos_title">Pagos</string>
+    <string name="current_status">Estado Actual</string>
+    <string name="pending_payments">Pagos Pendientes</string>
+    <string name="payment_history">Historial de Pagos</string>
+    <string name="no_pending_payments">No tienes pagos pendientes</string>
+    <string name="no_payment_history">No hay historial de pagos</string>
+    <string name="pay_now">Pagar Ahora</string>
+    <string name="view_details">Ver Detalles</string>
+    <string name="paid">Pagado</string>
+    <string name="pending">Pendiente</string>
+    <string name="overdue">Vencido</string>
+    <string name="current">Al Corriente</string>
+    <string name="month_january">Enero</string>
+    <string name="month_february">Febrero</string>
+    <string name="month_march">Marzo</string>
+    <string name="month_april">Abril</string>
+    <string name="month_may">Mayo</string>
+    <string name="month_june">Junio</string>
+    <string name="month_july">Julio</string>
+    <string name="month_august">Agosto</string>
+    <string name="month_september">Septiembre</string>
+    <string name="month_october">Octubre</string>
+    <string name="month_november">Noviembre</string>
+    <string name="month_december">Diciembre</string>
+    <string name="maintenance_fee">Cuota de Mantenimiento</string>
+    <string name="due_date">Fecha de Vencimiento</string>
+    <string name="payment_date">Fecha de Pago</string>
+    <string name="amount">Monto</string>
+    <string name="back_button_description">Regresar</string>
+    <string name="profile_icon_description">Perfil de usuario</string>
+    <string name="filter_button_description">Botón de filtro</string>
+    <string name="avisos_list_description">Lista de avisos</string>
+
+
+
+
+    <!-- Avisos Screen -->
+    <string name="avisos_title">Avisos</string>
+    <string name="filter_todos">Todos</string>
+    <string name="filter_eventos">Eventos</string>
+    <string name="filter_mantenimiento">Mantenimiento</string>
+    <string name="filter_servicios">Servicios</string>
+    <string name="filter_quejas_respuestas">Quejas</string>
+    <string name="ver_mas">Ver más</string>
+    <string name="hace_tiempo">Hace %1$s</string>
+
+    <!-- Tipos de avisos -->
+    <string name="tipo_evento">EVENTO</string>
+    <string name="tipo_mantenimiento">MANTENIMIENTO</string>
+    <string name="tipo_servicio">SERVICIO</string>
+    <string name="tipo_queja">QUEJA</string>
+    <string name="tipo_urgente">URGENTE</string>
+
+
+
 </resources>

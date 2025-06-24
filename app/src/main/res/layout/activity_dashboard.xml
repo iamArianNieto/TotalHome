@@ -32,13 +32,16 @@
 
             <ImageView
                 android:id="@+id/iv_profile"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/profile_background"
                 android:src="@drawable/ic_person"
                 android:scaleType="centerInside"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                android:contentDescription="@string/profile_icon_description" />
+
+
 
         </LinearLayout>
 
