@@ -84,6 +84,9 @@
     <string name="tipo_queja">QUEJA</string>
     <string name="tipo_urgente">URGENTE</string>
 
+    <!-- Volver-->
+
+    <string name="Titulo_Volver">Volver</string>
 
 
 </resources>

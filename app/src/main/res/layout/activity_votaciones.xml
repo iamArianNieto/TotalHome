@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+    <!-- Header con botón back y título -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp"
+        android:elevation="2dp"
+        android:background="@color/white"
+        >
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/Titulo_Volver"
+            android:scaleType="center" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Votaciones"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/Logo"
+            android:contentDescription="Logo" />
+
+    </RelativeLayout>
+
+    <!-- Contenido principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@color/white"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Sección Votaciones Disponibles -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Votaciones Disponibles"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Card Seguridad del Fraccionamiento -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_seguridad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/iv_arrow_1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seguridad del Fraccionamiento"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cambio en el empresa de seguridad de privada"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Ver más" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card Instalaciones Deportivas -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_deportivas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/iv_arrow_2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Instalaciones Deportivas"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cambiar los aros de las canchas"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Ver más" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sección Resultados de votaciones Anteriores -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultados de votaciones Anteriores"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Card Mantenimiento de Áreas Verdes -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_areas_verdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/iv_arrow_3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mantenimiento de Áreas Verdes"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resultados de la encuesta sobre el mantenimiento de áreas verdes."
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Ver más" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card Iluminación Nocturna -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_iluminacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/iv_arrow_4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Iluminación Nocturna"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resultados de la encuesta sobre instalación de iluminación nocturna."
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Ver más" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/background_menu_button"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/nav_inicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                app:tint="@color/icons_background_menu_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="10sp"
+                android:textColor="@color/nav_text_color"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_acceso"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_key"
+                app:tint="@color/nav_icon_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acceso"
+                android:textSize="10sp"
+                android:textColor="@color/nav_text_color"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_notificaciones"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notifications"
+                app:tint="@color/nav_icon_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notificaciones"
+                android:textSize="10sp"
+                android:textColor="@color/nav_text_color"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_pagos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_payment"
+                app:tint="@color/nav_icon_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pagos"
+                android:textSize="10sp"
+                android:textColor="@color/nav_text_color"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_usuario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_person"
+                app:tint="@color/nav_icon_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textSize="10sp"
+                android:textColor="@color/nav_text_color"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
