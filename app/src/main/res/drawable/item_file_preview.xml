@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_background"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="1dp">
+
+    <!-- Icono del tipo de archivo -->
+    <ImageView
+        android:id="@+id/iv_file_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_attachment"
+        android:tint="@color/primary_color"
+        android:layout_marginEnd="12dp"></ImageView>
+    <!-- Información del archivo -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="archivo.jpg"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/tv_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.4 MB"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Botón eliminar -->
+    <ImageView
+        android:id="@+id/iv_remove_file"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/text_hint"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

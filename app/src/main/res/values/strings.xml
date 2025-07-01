@@ -88,5 +88,25 @@
 
     <string name="Titulo_Volver">Volver</string>
 
+    <!-- Quejas Screen -->
+    <string name="nueva_queja">Nueva Queja</string>
+    <string name="tipo_quejaQueja">Tipo de Queja</string>
+    <string name="seguridad">Elemento de Seguridad</string>
+    <string name="infraestructura">Infraestructura</string>
+    <string name="personal_admin">Personal Administrativo</string>
+    <string name="servicio">Servicio</string>
+    <string name="descripcion_queja">Descripción de la Queja</string>
+    <string name="descripcion_hint">Describe detalladamente tu queja...</string>
+    <string name="adjuntar_evidencia">Adjuntar Evidencia (Opcional)</string>
+    <string name="fotografia">Fotografía</string>
+    <string name="video_corto">Video Corto (máx. 30s)</string>
+    <string name="grabacion_audio">Grabación de Audio</string>
+    <string name="sin_archivo">Sin archivo</string>
+    <string name="archivo_adjunto">archivo adjunto</string>
+    <string name="archivos_adjuntos">Archivos Adjuntos</string>
+    <string name="enviar_queja">Enviar Queja</string>
+    <string name="info_queja">Tu queja será enviada al administrador del fraccionamiento. Recibirás una respuesta en un plazo máximo de 48 horas.</string>
+    <string name="remove_file_button_description">Eliminar archivo adjunto</string>
+
 
 </resources>

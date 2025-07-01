@@ -63,8 +63,8 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         cardQuejas.setOnClickListener {
-            // Intent hacia QuejasActivity
-            Toast.makeText(this, "Quejas - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, QuejasActivity::class.java)
+            startActivity(intent)
         }
 
         cardQrVisitas.setOnClickListener {
