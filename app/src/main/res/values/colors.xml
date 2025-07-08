@@ -49,4 +49,16 @@
     <color name="background_menu_button">#F7FAFC</color>
     <color name="icons_background_menu_button">#B6C7D8</color>
 
+    <!-- Acceso Invitados-->
+
+    <color name="blue_accent">#4A90E2</color>
+    <color name="dark_blue">#2C3E50</color>
+    <color name="tab_unselected">#666666</color>
+    <color name="bottom_nav_unselected">#999999</color>
+    <color name="icon_color">#757575</color>
+    <color name="notification_background">#E9EDF4</color>
+    <color name="notification_background_item">#F8FAFC</color>
+
+
+
 </resources>

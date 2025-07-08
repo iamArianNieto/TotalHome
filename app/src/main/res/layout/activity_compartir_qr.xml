@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Header con menú hamburguesa y título -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Menú" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Compartir QR"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/Logo"
+            android:contentDescription="Logo Total Home" />
+
+    </RelativeLayout>
+
+    <!-- Card contenedor principal -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:background="@color/white"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <!-- Código QR -->
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/qr_code_placeholder"
+                android:contentDescription="Código QR"
+                android:scaleType="centerCrop" />
+
+            <!-- Botón Compartir QR -->
+            <Button
+                android:id="@+id/btn_share_qr"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_rounded_dark"
+                android:text="Compartir QR"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:elevation="2dp" />
+
+            <!-- Texto de validez -->
+            <TextView
+                android:id="@+id/tv_validity_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Este QR tiene una validez de 24 horas hasta el\ningreso del visitante"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!-- Sección Compartir en -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compartir en:"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Opciones de compartir -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Copiar enlace -->
+        <LinearLayout
+            android:id="@+id/ll_copy_link"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_link"
+                android:background="@drawable/circle_background_blue"
+                android:padding="12dp"
+                android:contentDescription="Copiar enlace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copiar\nenlace"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- WhatsApp -->
+        <LinearLayout
+            android:id="@+id/ll_whatsapp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_whatsapp"
+                android:background="@drawable/circle_background_green"
+                android:padding="12dp"
+                android:contentDescription="WhatsApp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WhatsApp"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Messenger -->
+        <LinearLayout
+            android:id="@+id/ll_messenger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_messenger"
+                android:background="@drawable/circle_background_messenger"
+                android:padding="12dp"
+                android:contentDescription="Messenger" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messenger"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Tu historia -->
+        <LinearLayout
+            android:id="@+id/ll_story"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_add_story"
+                android:background="@drawable/circle_background_blue"
+                android:padding="12dp"
+                android:contentDescription="Tu historia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu historia"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Twitter -->
+        <LinearLayout
+            android:id="@+id/ll_twitter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_twitter"
+                android:background="@drawable/circle_background_twitter"
+                android:padding="12dp"
+                android:contentDescription="Twitter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Twitter"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
