@@ -1,6 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background_light">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nuevo invitado"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/Logo"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+        <!-- Tipo de visitante -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de visitante"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_tipo_visitante"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Visita, Proveedor, Paquetería, Servicio, Empleado"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nombre completo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre completo"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_nombre_completo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Juan Carlos Portes R."
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ¿Ingresa con vehículo? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Ingresa con vehículo?"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_vehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_no_vehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="16sp"
+                android:layout_marginEnd="24dp" />
+
+            <RadioButton
+                android:id="@+id/rb_si_vehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sí"
+                android:textSize="16sp"
+                android:checked="true"
+                android:buttonTint="@color/primary_blue" />
+
+        </RadioGroup>
+
+        <!-- Información del vehículo -->
+        <LinearLayout
+            android:id="@+id/ll_vehicle_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- Marca y Submarca -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Marca"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/et_marca"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Chevrolet"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submarca"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/et_submarca"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Cruze"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_blue"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Placa y Color -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Placa"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/et_placa"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="24175"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Color"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/et_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Gris"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Observaciones -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Observaciones"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_observaciones"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Ingresa con 3 personas más"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:gravity="top"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Seleccionar fotografía -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una fotografía de tu galería (opcional)"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_profile"
+                app:civ_border_width="2dp"
+                app:civ_border_color="?attr/colorPrimary"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btn_cargar_foto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargar Foto"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp" />
+
+        </LinearLayout>
+
+        <!-- Válido para -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Válido para"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_valido_para"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rb_una_persona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 persona"
+                android:textSize="16sp"
+                android:checked="true"
+                android:buttonTint="@color/primary_blue"
+                android:layout_marginBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/rb_dos_personas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 persona ...."
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/rb_cinco_personas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Personas"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <!-- Botón Generar QR -->
+        <Button
+            android:id="@+id/btn_generar_qr"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Generar QR"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+</ScrollView>

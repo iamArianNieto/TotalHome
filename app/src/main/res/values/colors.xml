@@ -59,6 +59,12 @@
     <color name="notification_background">#E9EDF4</color>
     <color name="notification_background_item">#F8FAFC</color>
 
+    <!-- Nuevo invitado-->
+     <color name="primary_blue">#4285F4</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="colorGray">#808080</color>
+    <color name="gray_border">#E0E0E0</color>
+    <color name="button_secondary">#37474F</color>
 
 
 </resources>
